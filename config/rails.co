@@ -1,0 +1,41 @@
+
+define user express greeting
+    "hello"
+    "hi"
+    "Hey"
+
+define bot express greeting
+    "Hello, and Welcome User"
+
+define bot ask how are you
+    "Hello, How are you doing?"
+
+define flow greeting
+  user express greeting
+  bot express greeting
+  bot ask how are you
+
+define user answer how are you
+    "doing good, what about you?"
+
+define bot answer how are you
+    "I'm doing good"
+
+define bot capabilities
+    "How can i help you today"
+
+define flow asking how are you
+    user answer how are you
+    bot answer how are you
+    bot capabilities
+
+define user asks coding questions
+    "help me to code"
+    "generate me the code"
+
+define bot answers coding questions
+    "Sorry! i'm not capable of coding"
+    "Right now my coding servers are busy"
+define flow generate code snippet
+    user asks coding questions
+    bot answers coding questions
